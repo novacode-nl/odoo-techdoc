@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright Nova Code (http://www.novacode.nl)
+See LICENSE file for full copyright and licensing details. -->
+
+<odoo>
+    <data>
+        <record id="view_techdoc_import" model="ir.ui.view">
+            <field name="name">Import</field>
+            <field name="model">techdoc.import</field>
+            <field name="arch" type="xml">
+                <form string="Import">
+                    <group>
+                        <field name="model_id"/>
+                        <field name="overwrite"/>
+                    </group>
+                    <footer>
+                        <button name="techdoc_import" string="_Import" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_techdoc_import" model="ir.actions.act_window">
+            <field name="name">Import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">techdoc.import</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            action="action_techdoc_import"
+            id="menu_techdoc_import"
+            parent="menu_techdoc"/>
+    </data>
+</odoo>

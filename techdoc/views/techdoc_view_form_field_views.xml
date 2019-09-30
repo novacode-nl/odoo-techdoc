@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright Nova Code (http://www.novacode.nl)
+See LICENSE file for full copyright and licensing details. -->
+
+<odoo>
+    <data>
+        <record id="view_techdoc_view_form_field_tree" model="ir.ui.view">
+            <field name="name">techdoc.view.form.field.tree</field>
+            <field name="model">techdoc.view.form.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="model_id"/>
+                    <field name="sequence"/>
+                    <field name="field_description"/>
+                    <field name="field_type"/>
+                    <field name="field_name"/>
+
+                    <!-- Start form-view data -->
+                    <field name="form_groups"/>
+
+                    <!-- Field attributes -->
+                    <field name="groups"/>
+                    <field name="attrs"/>
+                    <field name="required"/>
+                    <field name="readonly"/>
+                    <field name="invisible"/>
+                    <field name="domain"/>
+                    <field name="context"/>
+                    <field name="on_change"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_techdoc_view_form_field" model="ir.actions.act_window">
+            <field name="name">Form View - Fields</field>
+            <field name="res_model">techdoc.view.form.field</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
